@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-container {
+  background-image: url('https://tse2.mm.bing.net/th/id/OIP.3gZm8hN0Ks06TBcQRFhW6gAAAA?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  border: 2px solid #ffd700;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* Add a semi-transparent overlay for better text readability */
+.card-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  z-index: 1;
+}
+
+/* Make all text elements appear above the overlay */
+header, main, footer {
+  position: relative;
+  z-index: 2;
+}
+header img:first-child {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 3px solid #ffd700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  background: rgb(82, 79, 79);
+  padding: 8px;
+  object-fit: cover;
+}
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Enhance text colors for better visibility */
+header h2 {
+  color: #ff8c00;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.5px #b63636;
+  
+}
+
+header h1 {
+  color: #ffd700;
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: 'Rozha One', serif;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.5px #888a16bd;
+}
+
+header h3 {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+main p:first-of-type {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+main p:last-of-type {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+main {
+  min-height: 50px;
+}
+
+footer {
+  min-height: 30px;
+  font-style: italic;
+  color: #e00e0e98;
+  font-weight: bold;
+}
+main img{
+  height: 150px;
+}
+
+
+main h4 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+
+footer h6 {
+  color: #312a2a98;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+  
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+  }
+  
+  header h2 {
+    font-size: 20px;
+  }
+  
+  header h3 {
+    font-size: 16px;
+  }
+}
